@@ -1,0 +1,13 @@
+{
+  "name": "google-play-publisher",
+  "owner": { "name": "Muhammad Talha", "url": "https://github.com/MrTalhaMTS" },
+  "plugins": [
+    {
+      "name": "google-play-publisher",
+      "source": "./",
+      "description": "Publish Android apps to Google Play end to end with Claude: build, listing, screenshots, Play Console.",
+      "version": "1.0.0",
+      "category": "development"
+    }
+  ]
+}
