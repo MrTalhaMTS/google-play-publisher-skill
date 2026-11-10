@@ -20,5 +20,6 @@
     "release"
   ],
   "displayName": "Google Play Publisher",
-  "icon": ".claude-plugin/icon.png"
+  "icon": ".claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://github.com/MrTalhaMTS/google-play-publisher-skill/blob/main/PRIVACY.md"
 }

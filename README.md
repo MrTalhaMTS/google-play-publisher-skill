@@ -62,6 +62,10 @@ skills/google-play-publisher/
   scripts/feature_graphic.py      1024×500 feature graphic
 ```
 
+## Privacy
+
+See [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT
