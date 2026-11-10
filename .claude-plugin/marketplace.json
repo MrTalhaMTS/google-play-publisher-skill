@@ -1,6 +1,10 @@
 {
   "name": "google-play-publisher",
-  "owner": { "name": "Muhammad Talha", "url": "https://github.com/MrTalhaMTS" },
+  "description": "Skills for publishing Android apps to Google Play with Claude.",
+  "owner": {
+    "name": "Muhammad Talha",
+    "url": "https://github.com/MrTalhaMTS"
+  },
   "plugins": [
     {
       "name": "google-play-publisher",
