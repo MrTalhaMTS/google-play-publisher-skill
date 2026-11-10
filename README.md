@@ -37,6 +37,16 @@ For the Play Console part, install the [Claude in Chrome](https://claude.ai/chro
 - For builds: the toolchain your app already uses (Node + EAS CLI, Gradle/JDK 17, or Flutter).
 - For screenshots: Android SDK with an emulator image, Python 3 with Pillow (`pip install pillow`).
 
+## Data and services
+
+The skill runs entirely on your computer and in your own browser. It stores nothing and has no server of its own.
+
+- **Google Play Console** (play.google.com/console): through Claude in Chrome it enters your app's listing text, images, screenshots, contact email, website and privacy policy URL, using your own signed-in account.
+- **Expo EAS** (expo.dev), only if your app uses it: builds are run with your own Expo login.
+- **Your Android SDK / Gradle / Flutter**: local builds and emulator screenshots, nothing sent anywhere.
+
+It reads the developer contact details you provide (support email, website, privacy URL) only to fill those Play Console fields.
+
 ## What's inside
 
 ```
