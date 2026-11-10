@@ -34,7 +34,7 @@ Pick the path that matches the project. Details and pitfalls: `references/build.
 - **Bare React Native / Kotlin / Java**: `./gradlew bundleRelease` with a release `signingConfig`.
 - **Flutter**: `flutter build appbundle --release`.
 
-Then run `python scripts/check_aab.py <path.aab>`. It prints the package name, permissions, and warns about `AD_ID`, storage, location, SMS and other permissions that trigger extra Play Console forms. Keep the result: the Advertising ID and Data safety answers must match it.
+Then run `check_aab.py <path.aab>` (write it out from `references/scripts.md` first, as explained there). It prints the package name, permissions, and warns about `AD_ID`, storage, location, SMS and other permissions that trigger extra Play Console forms. Keep the result: the Advertising ID and Data safety answers must match it.
 
 Before building for real, install a release APK on an emulator or phone and look at the main screens. In practice this is where layout bugs show up that look fine in the browser (rounding that wraps grid tiles, content that doesn't scroll on 16:9 screens). Fix them before the store screenshots, because screenshots of a bug are worse than no screenshots.
 
@@ -52,9 +52,9 @@ Read `references/store-assets.md` for the exact limits. Short version:
 | Phone screenshots | 2-8, each side 320-3840 px, long side ≤ 2× short side (so 1080×2400 is rejected; use 1080×1920) |
 | 7-inch / 10-inch tablet | up to 8 each; e.g. 1200×1920 and 1600×2560 |
 
-1. **Listing text**: write `listings.json` keyed by Play locale (`en-US`, `ar`, `hi-IN`, `bn-BD`, `id`, `tr-TR`, `ur`, ...), each with `title`, `short`, `full`. Run `python scripts/check_listing.py listings.json` to verify limits. Describe only what the app does today. Avoid "no ads" if ads are planned, and say when parts of the app are English-only.
-2. **Screenshots**: capture real screens from an emulator running the release build (`references/store-assets.md` has the adb recipe: set `wm size 1080x1920`, install, tap through, `screencap`). Then `python scripts/compose_screenshots.py <dir>` adds a caption band on a gradient. Keep the raw set too.
-3. **Feature graphic**: `python scripts/feature_graphic.py --title ... --tagline ... --icon icon.png --out feature.png`. Look at the result before uploading.
+1. **Listing text**: write `listings.json` keyed by Play locale (`en-US`, `ar`, `hi-IN`, `bn-BD`, `id`, `tr-TR`, `ur`, ...), each with `title`, `short`, `full`. Run `check_listing.py listings.json` (from `references/scripts.md`) to verify limits. Describe only what the app does today. Avoid "no ads" if ads are planned, and say when parts of the app are English-only.
+2. **Screenshots**: capture real screens from an emulator running the release build (`references/store-assets.md` has the adb recipe: set `wm size 1080x1920`, install, tap through, `screencap`). Then `compose_screenshots.py` (from `references/scripts.md`) adds a caption band on a gradient. Keep the raw set too.
+3. **Feature graphic**: `feature_graphic.py --title ... --tagline ... --icon icon.png --out feature.png` (from `references/scripts.md`). Look at the result before uploading.
 
 ## Phase 3: Play Console in the user's Chrome
 
@@ -84,7 +84,8 @@ Tell the user, in plain words: what is now in review, which countries, what Play
 - `references/store-assets.md`: limits, emulator screenshot recipe, caption and graphic tips.
 - `references/play-console.md`: URL map, upload flow, browser troubleshooting.
 - `references/declarations.md`: question-by-question guide for App content forms.
-- `scripts/check_aab.py`: inspect a bundle's package and permissions.
-- `scripts/check_listing.py`: verify listing text limits for every locale.
-- `scripts/compose_screenshots.py`: captioned store screenshots from raw captures.
-- `scripts/feature_graphic.py`: 1024×500 feature graphic from an icon and two lines of text.
+- `references/scripts.md`: four helper scripts as code blocks (write them to a scratch folder, then run):
+  - `check_aab.py`: inspect a bundle's package and permissions.
+  - `check_listing.py`: verify listing text limits for every locale.
+  - `compose_screenshots.py`: captioned store screenshots from raw captures.
+  - `feature_graphic.py`: 1024×500 feature graphic from an icon and two lines of text.

@@ -56,10 +56,9 @@ skills/google-play-publisher/
   references/store-assets.md  limits, emulator screenshot recipe
   references/play-console.md  URL map, uploads, browser troubleshooting
   references/declarations.md  App content forms, question by question
-  scripts/check_aab.py      package, permissions, AD_ID check
-  scripts/check_listing.py  listing length limits for every language
-  scripts/compose_screenshots.py  captioned store screenshots
-  scripts/feature_graphic.py      1024×500 feature graphic
+  references/scripts.md     helper scripts as code blocks (Claude writes them
+                            to a scratch folder and runs them): bundle check,
+                            listing limits, captioned screenshots, feature graphic
 ```
 
 ## Privacy

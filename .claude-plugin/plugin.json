@@ -1,6 +1,6 @@
 {
   "name": "google-play-publisher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Publish Android apps to Google Play end to end: signed .aab, store listing in many languages, screenshots and feature graphic, and Play Console filled in through Claude in Chrome.",
   "author": {
     "name": "Muhammad Talha",

@@ -10,7 +10,7 @@
       "name": "google-play-publisher",
       "source": "./",
       "description": "Publish Android apps to Google Play end to end with Claude: build, listing, screenshots, Play Console.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "development"
     }
   ]

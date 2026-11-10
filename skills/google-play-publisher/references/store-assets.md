@@ -25,7 +25,7 @@ At least 4 phone screenshots of 1080 px or more make the app eligible for promot
   {"en-US": {"title": "...", "short": "...", "full": "..."}, "ar": {...}}
   ```
 - Common Play locale codes: en-US, ar, ur, hi-IN, bn-BD, id, tr-TR, fr-FR, de-DE, es-ES, pt-BR, ru-RU, ms, fa.
-- Run `scripts/check_listing.py listings.json`.
+- Run `check_listing.py listings.json` from `references/scripts.md`.
 
 ## Screenshots from an emulator
 ```bash
@@ -47,6 +47,6 @@ adb exec-out screencap -p > 01-home.png
 - Delete the AVDs you created when done (`avdmanager delete avd -n shot-phone`).
 
 ## Captions and graphics
-- `scripts/compose_screenshots.py` puts the raw shot below a short caption on a gradient, same pixel size as the input. Captions: 2-5 words plus a short subline; benefits, not feature names.
-- `scripts/feature_graphic.py` makes a 1024×500 banner from an icon and two lines of text. Keep text off the outer 10% edges, where Play crops in some layouts.
+- `compose_screenshots.py` (in `references/scripts.md`) puts the raw shot below a short caption on a gradient, same pixel size as the input. Captions: 2-5 words plus a short subline; benefits, not feature names.
+- `feature_graphic.py` (in `references/scripts.md`) makes a 1024×500 banner from an icon and two lines of text. Keep text off the outer 10% edges, where Play crops in some layouts.
 - If any asset was made with AI help, the user decides how to answer Play's AI-asset label question.

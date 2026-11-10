@@ -1,6 +1,6 @@
 # App content declarations
 
-Draft the answers from the code and `scripts/check_aab.py`, show them to the user in one message, and get explicit approval before saving. These are legal statements in the user's name.
+Draft the answers from the code and `check_aab.py` (in `references/scripts.md`), show them to the user in one message, and get explicit approval before saving. These are legal statements in the user's name.
 
 ## Privacy policy
 Public HTTPS page that names the app or clearly covers it, reachable without login, not a PDF. Check it returns HTTP 200.
